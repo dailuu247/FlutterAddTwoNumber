@@ -1,6 +1,12 @@
 
 # FlutterAddTwoNumber
 Ứng dụng Cộng 2 số (học sinh tiểu học) sử dụng Flutter
+- Người dùng nhập số thứ 1 và số thứ 2 và bấm nút Add
+- Chương trình kiểm tra số chữ số của số thứ 1, số thứ 2
+- Chuyển String thành List <String>
+- Cộng từng hàng tính số dư
+- Hàng cuối > 10 thì thêm 1 vào result
+- Hiện thị kết quả
 
 ## Getting Started
 
