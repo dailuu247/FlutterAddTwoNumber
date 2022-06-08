@@ -93,12 +93,16 @@ class _AddNumbersState extends State<AddNumbers> with SingleTickerProviderStateM
                   int soDu = 0;
                   for(i=soChuSo-1;i>=0;i--) {
                     total[i] = int.parse(num1[i]) + int.parse(num2[i]) + soDu;
-                    if(total[i] >= 10) {
+                    if(total[i]>=10 && i==0) {
+                      total[i]= total[i] % 10;
+                      result=[total[i].toString(),...result];
+                      result.insert(0,'1');
+                    }
+                    if(total[i] >= 10 && i!=0) {
                       total[i]= total[i] % 10;
                       soDu=1;
                     } else { soDu=0;}
                     result=[total[i].toString(),...result];
-                    if(total[0]>=10) result = ['1',...result];
                   }
                   print(result);
                   _tot.text = result.join();
